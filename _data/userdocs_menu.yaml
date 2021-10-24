@@ -1,0 +1,27 @@
+- label: Usage Documentation
+  items:
+    - name: Getting Started
+      link: /userdocs/setupguide/
+    - name: Usage Overview
+      link: /userdocs/usage-overview/
+    - name: The UI
+      link: /userdocs/ui-overview/
+      items:
+      - name: Splash Screen
+        link: /userdocs/ui-splashscreen
+      - name: Menu Bar
+        link: /userdocs/ui-menubar
+      - name: Start Trace Tab
+        link: /userdocs/ui-starttracetab
+      - name: Visualiser Tab
+        link: /userdocs/ui-visualisertab
+      - name: Analysis Tab
+        link: /userdocs/ui-analysistab
+      - name: Settings Dialog
+        link: /userdocs/ui-settingsdialog
+    - name: Command Line Usage
+      link: /userdocs/commandline
+    - name: Remote Tracing
+      link: /userdocs/remote-tracing/
+    - name: Manipulating Graphs
+      link: /userdocs/graph-manipulation/

@@ -1,0 +1,23 @@
+- name: Documentation
+  link: /userdocs/usage-overview/
+- name: Development
+  link: /devdocs/overview/
+  dropdown: 
+    - name: Documentation
+      link: /devdocs/overview/
+    - name: Trello
+      link: https://trello.com/b/OyO4A1O9/rgat
+    - name: Builds
+      link: https://github.com/ncatlin/rgatPrivate/actions
+ 
+- name: Gallery
+  link: /Gallery/
+  
+  
+- name: Download
+  link: /download/
+  dropdown: 
+    - name: Latest Release
+      link: /latest/
+    - name: Source (GitHub)
+      link: /source/

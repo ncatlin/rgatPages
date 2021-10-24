@@ -1,0 +1,32 @@
+- title: UI Documentation
+  images:
+    - link: userdocs/img/uigallery_splash.png
+      alt: The alt text for the image
+      description: |-
+        **[Splash Screen](userdocs/ui-splashscreen.md)** - Load a binary target/recording or check for updates
+      ratio: is-16by9
+    - link: userdocs/img/uigallery_menu.png
+      alt: The alt text for the image
+      description: |-
+       **[Menu Bar](ui-menubar.md)** - Provides quick access to status, alerts and configuration
+      ratio: is-16by9
+    - link: userdocs/img/uigallery_launcher.png
+      alt: The alt text for the image
+      description: |-
+       **[Trace Launch Tab](userdocs/ui-starttracetab.md)** - Light static analysis, trace settings and launching 
+      ratio: is-16by9
+    - link: userdocs/img/uigallery_visualiser.png
+      alt: The alt text for the image
+      description: |-
+       **[Visualiser Tab](userdocs/uigallery_visualiser)** - Where trace graph layouts are viewed and manipulated
+      ratio: is-16by9
+    - link: userdocs/img/uigallery_analysistab.png
+      alt: The alt text for the image
+      description: |-
+       **[Analysis Tab](userdocs/uigallery_analysistab)** - Lists API usage information for each trace
+      ratio: is-16by9
+    - link: userdocs/img/uigallery_settings.png
+      alt: The alt text for the image
+      description: |-
+       **[Settings Dialog](ui-settingsdialog)**: Tweak configuration, themes, signatures, etc
+      ratio: is-16by9
