@@ -20,7 +20,7 @@ All graphs are rendered in a 3D space and can be rotated and moved.
 
 The following useful default keybinds are configurable
 
-[yaw](rgat_RegistryAPITest_21472_1024_231014.mp4)
+[yaw](video/rgat_RegistryAPITest_21472_1024_231014.mp4)
 
 
 ### Static Layouts
