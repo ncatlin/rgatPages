@@ -22,7 +22,7 @@ The following useful default keybinds are configurable
 
 ![yaw](https://user-images.githubusercontent.com/5470374/138616494-292174a7-ed54-49c0-949d-5641a5a82bfd.mp4)
 
-
+https://user-images.githubusercontent.com/5470374/138616494-292174a7-ed54-49c0-949d-5641a5a82bfd.mp4
 
 
 
