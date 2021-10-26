@@ -43,6 +43,7 @@ Many keybinds can be used with keyboard modifiers to change their magnitude
 
 The following useful default keybinds are configurable
 
+<<<<<<< HEAD
 #### Yaw
 
 | Action  | Keybind   | Mouse |
@@ -82,6 +83,13 @@ You can also drag the sliders in the control pane or double click them to set sp
 |---|---|---|
 |  Center View | Q  | 
 |  Keep View Centered | Shift-Q  | 
+=======
+![yaw](https://user-images.githubusercontent.com/5470374/138616494-292174a7-ed54-49c0-949d-5641a5a82bfd.mp4)
+
+https://user-images.githubusercontent.com/5470374/138616494-292174a7-ed54-49c0-949d-5641a5a82bfd.mp4
+
+
+>>>>>>> 9e495860139adc6c64dcde258b065077e0cf3ba6
 
 
 ### Static Layouts
