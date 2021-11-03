@@ -22,7 +22,7 @@ title: rgat
 email: niacatn@g[].com
 description: >- # this means to ignore newlines until "baseurl:"
   Dynamic Analysis and Instruction Trace Visualisation Tool
-baseurl: "/rgatPages/" # the subpath of your site, e.g. /blog
+baseurl: "/rgatPages" # the subpath of your site, e.g. /blog
 url: "https://ncatlin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nictln
 github_username:  ncatlin

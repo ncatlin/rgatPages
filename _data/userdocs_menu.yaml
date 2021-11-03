@@ -1,11 +1,11 @@
 - label: Usage Documentation
   items:
     - name: Getting Started
-      link: /userdocs/setupguide/
+      link: /userdocs/setupguide
     - name: Usage Overview
-      link: /userdocs/usage-overview/
+      link: /userdocs/usage-overview
     - name: The UI
-      link: /userdocs/ui-overview/
+      link: /userdocs/ui-overview
       items:
       - name: Splash Screen
         link: /userdocs/ui-splashscreen

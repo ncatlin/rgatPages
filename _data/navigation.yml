@@ -10,8 +10,8 @@
     - name: Builds
       link: https://github.com/ncatlin/rgatPrivate/actions
  
-- name: Gallery
-  link: /Gallery/
+#- name: Gallery
+#  link: /Gallery/
   
   
 - name: Download
@@ -20,4 +20,4 @@
     - name: Latest Release
       link: /latest/
     - name: Source (GitHub)
-      link: /source/
+      link: https://github.com/ncatlin/rgat
