@@ -8,7 +8,7 @@
     - name: Trello
       link: https://trello.com/b/OyO4A1O9/rgat
     - name: Builds
-      link: https://github.com/ncatlin/rgatPrivate/actions
+      link: https://github.com/ncatlin/rgat/actions
  
 #- name: Gallery
 #  link: /Gallery/
@@ -18,6 +18,6 @@
   link: /download/
   dropdown: 
     - name: Latest Release
-      link: /latest/
+      link: https://github.com/ncatlin/rgat/releases
     - name: Source (GitHub)
       link: https://github.com/ncatlin/rgat

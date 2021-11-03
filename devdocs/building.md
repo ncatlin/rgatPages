@@ -9,7 +9,7 @@ hero_darken: true
 ---
 # Building
 
-The [github actions script](https://github.com/ncatlin/rgatPrivate/blob/master/.github/workflows/BuildWindows.yml) builds rgat using some custom-compiled libraries. All compilation is tested in Visual Studio 2019 Community.
+The [github actions script](https://github.com/ncatlin/rgat/blob/master/.github/workflows/BuildWindows.yml) builds rgat using some custom-compiled libraries. All compilation is tested in Visual Studio 2019 Community.
 
 ### rgat Core and UpdateFinalizer
 
