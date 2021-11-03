@@ -12,10 +12,10 @@ hero_darken: true
 
 **rgat** is a dynamic binary analysis tool for gathering and visualising instruction traces. It is intended to help software reverse engineers in bridging the gap between the high level API view of malware sandboxes and the low level function view of disassemblers and decompilers - particularly where code obfuscation is present. 
 
-![Switching between different plots](img/plotgif.gif)
+![Switching between different plots](rgatPages/img/plotgif.gif)
 *Different layouts*
 
-![The UI with a heatmap graph](img/heatmap_UI.png)
+![The UI with a heatmap graph](rgatPages/img/heatmap_UI.png)
 *Find busy areas with a heatmap render*
 
 ![upx.exe packing a binary](https://user-images.githubusercontent.com/5470374/139731758-5693510a-89d3-4bc2-aebe-000e680a65d9.mp4)
@@ -36,7 +36,7 @@ hero_darken: true
 - Customisable instrumentation (module granularity)
 - Remote tracing - perform tracing in real time over a network
 
-See the [Changelog](link here) for a full list of features
+See the [Changelog](https://github.com/ncatlin/rgat/blob/master/CHANGELOG.md) for a full list of features
 
 See the [Trello](https://trello.com/b/OyO4A1O9/rgat) for the features under development or scheduled to be worked on and known bugs
 
@@ -56,7 +56,7 @@ The two main requirements for 0.6.0 are:
 - Run rgat.exe - it will unpack the tools it needs into the directory it is launched in
 - Configure it to your liking in the settings
   
-If nothing else you may want to get familiar with the [graph manipulation controls](userdocs/graph-manipulation.md)
+If nothing else you may want to get familiar with the [graph manipulation controls](rgatPages/userdocs/graph-manipulation.md)
 
 ##### To trace something
 - Drag and drop a binary onto the UI
@@ -64,8 +64,8 @@ If nothing else you may want to get familiar with the [graph manipulation contro
   
 ## Documentation
 
-- [Usage Guide](userdocs/overview.md)
-- [How It Works/Development](devdocs/overview.md)
+- [Usage Guide](rgatPages/userdocs/overview.md)
+- [How It Works/Development](rgatPages/devdocs/overview.md)
 
 ## Known Issues
 
