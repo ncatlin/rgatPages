@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Recording Large Instruction Traces - Quickly"
-date:   2021-11-01 09:41:34 +0100
+date:   2021-11-03 21:20:00 +0100
 categories: jekyll update
-image: /blogimg/0/countBlockTrace.gif
+image: blogimg/0/countBlockTrace.gif
 ---
 
 rgat operates by reading instruction traces, converting those to a graph and then laying those graphs out into plots. The problem here is that computers can generally execute instructions faster than they can record, analyse and make fancy graphs with them.

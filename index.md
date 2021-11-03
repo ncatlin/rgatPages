@@ -13,17 +13,19 @@ hero_darken: true
 **rgat** is a dynamic binary analysis tool for gathering and visualising instruction traces. It is intended to help software reverse engineers in bridging the gap between the high level API view of malware sandboxes and the low level function view of disassemblers and decompilers - particularly where code obfuscation is present. 
 
 ![Switching between different plots](img/plotgif.gif)
+
 *Different layouts*
 
 ![The UI with a heatmap graph](img/heatmap_UI.png)
+
 *Find busy areas with a heatmap render*
 
-<video src="https://user-images.githubusercontent.com/5470374/139731758-5693510a-89d3-4bc2-aebe-000e680a65d9.mp4" controls="controls" style="max-width: 500px;">
-  
+
+<video src='https://user-images.githubusercontent.com/5470374/140196228-e0beab8f-2aea-4593-8173-ffdb69962c5a.mp4' controls='controls' style='max-width: 800px;'></video>
+
 *Live cylinder plot of UPX packing a binary*
 
-<video src="https://user-images.githubusercontent.com/5470374/139732976-37df2626-7993-4398-92cd-2720c8acfdbe.mp4" controls="controls" style="max-width: 500px;">
-  
+<video src="https://user-images.githubusercontent.com/5470374/139732976-37df2626-7993-4398-92cd-2720c8acfdbe.mp4" controls="controls" style="max-width: 800px;"></video>
 *'Detonate' malware into a force-directed graph layout*
 
 ### Features

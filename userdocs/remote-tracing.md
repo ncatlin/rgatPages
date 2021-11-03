@@ -17,7 +17,7 @@ rgat should be started in GUI mode as usual on the visualiser device, and in hea
 
 rgat should be installed on the 'headless' tracing device (running in command line mode) and the GPU enabled analysis device (running in GUI mode). Signatures can be transferred by the GUI to the tracer, but actual samples need to be managed by the user. 
 
-![Listen Dialog](../img/listenmode.png)
+![Listen Dialog](img/listenmode.png)
 
 #### Method 1: GUI -> Headless connection
 

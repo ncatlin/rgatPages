@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "The Eldritch Birds Nest - Control Flow Graph Clumping"
-date:   2021-08-16 09:41:34 +0100
+date:   2021-11-03 21:22:00 +0100
 categories: jekyll update
-image: /blogimg/1/thumbnail_jmc_gs.png
+image: blogimg/1/thumbnail_jmc_gs.png
 ---
 
 Modern compilers generate a lot of code that gets poor results from force-directed graph layouts. This post discusses why and some steps being taken to improve it.
