@@ -53,8 +53,8 @@ The two main requirements for 0.6.0 are:
 - For the computer running the visualiser: A GPU with Vulkan driver support (ie: [_this_ test program](https://github.com/skeeto/vulkan-test) works)
 
 ##### To install
-- If .NET 5+ isn't installed, [install it](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)(run console apps -> x64). Running rgat in the console will tell you if this is the problem.
-- Download the [latest release]() - currently 0.6.0
+- If .NET 5+ isn't installed, [install it](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)(run console apps -> x64). If nothing happens then running rgat in the console will tell you if this is the problem.
+- Download the [latest release](https://github.com/ncatlin/rgat/releases) - currently 0.6.0
 - Unzip rgat.exe *into its own directory*
 - Run rgat.exe - it will unpack the tools it needs into the directory it is launched in
 - Configure it to your liking in the settings
