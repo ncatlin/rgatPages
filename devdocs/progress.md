@@ -1,5 +1,5 @@
 ---
-subtitle: Development - Design Overview
+subtitle: Development
 layout: page
 menubar: devdocs_menu
 email: niacatn@gmail.com
@@ -7,78 +7,48 @@ hero_height: is-fullwidth
 hero_darken: true
 
 ---
-## rgat
+## Progress
 
-dev stuff
+In 0.6 rgat finally has a reasonably portable and maintainable codebase, but while it's functional it's probably not genuinely useful on real targets. 
 
-library choices 
+#### Performance Bottlenecks
 
-modules etc 
-[example]
+Running a 'big' target (eg: VLC) presents two major problems:
 
+* The number of nodes overwhelms the layout algorithm. It gets up to 400k nodes within seconds and the FR-node pipeline grinds to a halt. This can be mitigated a little by changing layouts or filtering out some of the many, many different modules VLC executes but fine-grained filtering within modules is needed.
 
-### Features
+* Tracing - It's a testament to the amazing power of JIT'ing that - in release builds - the C# port of rgat can clear the trace backlog faster than the pin client can generate it. This may mean that the bottleneck is in tracing and I'm not sure how much more room there is for optimisation there.
 
-- GPU accellerated graph layout
-- Thread preview graphs
-- Trace replay
-- Heatmap generation
-- API recording
-- Signature scanning with YARA and Detect-It-Easy support
-- Customisable instrumentation (choose what is traced and how much)
-- Remote tracing - perform tracing and view the results on different machines
-- Command line tracing - record a trace without a GPU for future replay
+#### Layout Quality
 
-Check the Trello for the features under development or scheduled to be worked on.
+* Standard Fruchterman-Reingold is probably just not the best fit for control flow graphs in aesthetic terms. But:
+* None of the layouts are going to work very well until the node clumping issue is dealt with. This is likely going to mean writing out high-degree nodes from the layout algorithm. I tried reducing the force of their edges but results were not that helpful.
 
 
+#### Stability
 
-## Requirements and Installation
+* Every crash encountered so far has been reproduced and removed, but testing has not been rigorous due to how fast the code has been changing. The use of un-managed Vulkan and Imgui API usage will likely be a source of crashes as the UI and layout pipelines are refined.
 
-The two main requirements are:
-- Windows, with the ability to run .NET Core programs
-- For GUI usage: A GPU with Vulkan support
+#### Trace Accuracy
 
-To install:
-- Download a release
-- Unzip it somewhere
-- Run rgat.exe
-- Either start using it or configure it to your liking in the settings
+* The pintool tracing code is much similar and more robust now (at the expense of some performance) but it is almost certainly going to break or at least be inaccurate on more interesting bits of code.
 
-## Documentation
+#### API Tracing
 
-- Usage Guide
-- How it works
-- Development
+* This is hamstrung by requiring implementation in both rgat.exe and the pintool. Ideally find a way to have the pintool load everything it needs from the same file rgat uses to interpret API parameters/effects.
 
-### Technologies
+## Roadmap
 
-- [Intel Pin](https://software.intel.com/content/www/us/en/develop/articles/pin-a-dynamic-binary-instrumentation-tool.html) for generating instruction traces
-- [Veldrid](https://github.com/mellinoe/veldrid), a .NET graphics library
-- [Dear ImGui](https://github.com/ocornut/imgui) providing the GUI, via [ImGui.NET](https://github.com/mellinoe/ImGui.NET)
-- Force-directed graph layout based on Jared McQueens [WebGL algorithm](https://github.com/jaredmcqueen/analytics/tree/eed32e17922ef16288984e27f46717e8b7a2d602)
-- [Yara](https://github.com/virustotal/yara), via the Airbus CERT [dnYara library](https://github.com/airbus-cert/dnYara)
-- A woefully incomplete .NET [port](https://github.com/ncatlin/DiELibDotNet) of the [Detect-It-Easy engine](https://github.com/horsicq/DIE-engine)
-- [PeNet](https://github.com/secana/PeNet) for static analysis of PE binaries
+* 0.6 is a 'it works now, but as a research project' release
+* 0.7 will come out when it feels actually useful on real targets
+* 0.7 -> 0.8 will start getting more novel functionality - memory operations would be idea. Also think about a Linux port as all the core functionality should be settled by now.
 
-A full list and discussion of libraries can be found in the development documentation
+### 0.7 goals/requirements
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-code
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ncatlin/rgat/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* Fixes for any showstopping bugs in other peoples environments (incl. NVIDIA GPU testing)
+* Creation of a suite of test cases
+* A command-line tracing mode to integrate test-cases into CI
+* Reliable generation of useful layouts
+* Resilience with large traces
+* API instrumentation revamp
+* Instrumentation of usefully large set of APIs

@@ -20,8 +20,8 @@
       - name: Settings Dialog
         link: /userdocs/ui-settingsdialog
     - name: Manipulating Graphs
-      link: /userdocs/graph-manipulation/
+      link: /userdocs/graph-manipulation
     - name: Command Line Usage
       link: /userdocs/commandline
     - name: Remote Tracing
-      link: /userdocs/remote-tracing/
+      link: /userdocs/remote-tracing

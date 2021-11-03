@@ -22,13 +22,13 @@ Use the splash screen or main menu to load a target. This will take you to the t
 
 #### Preparation Step 3 - Customise tracing settings  *(Optional)* 
 
-Customise what will be traced and how, as [docmented here](ui-starttracetab), and click **Start Trace** to run the target.
+Customise what will be traced and how, as [documented here](ui-starttracetab), and click **Start Trace** to run the target.
 
 ### Trace Analysis
 
 #### Runtime Visualisation
 
-In the [Visualiser Tab](ui-visualisertab) you can view the threads being plotted as the trace is collected and start manipulating, navigating and higlighting the graphs immediately. Processes can be paused, resumed and terminated if you want to adjust the trace settings and re-launch.
+In the [Visualiser Tab](ui-visualisertab) you can view the threads being plotted as the trace is collected and start manipulating, navigating and highlighting the graphs immediately. Processes can be paused, resumed and terminated if you want to adjust the trace settings and re-launch.
 
 #### Replay Visualisation
 

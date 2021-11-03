@@ -10,14 +10,7 @@
       link: /devdocs/libraries
     - name: Building
       link: /devdocs/building
-      items:
-        - name: Page With Sidebar 
-          link: /page-1/
-        - name: Page Without Sidebar
-          link: /page-2/
-        - name: Page With Menubar
-          link: /page-3/
     - name: Testing
       link: /devdocs/testing
     - name: Development Progress
-      link: /
+      link: /devdocs/progress

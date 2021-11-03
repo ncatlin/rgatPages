@@ -77,7 +77,6 @@ You can also drag the sliders in the control pane or double click them to set sp
 
 #### Auto Centering
 
-
 | Action  | Keybind   |
 |---|---|
 |  Center View | Q  | 
@@ -131,7 +130,7 @@ https://user-images.githubusercontent.com/5470374/138764751-d1946f2b-3797-4b74-b
 ### Feature Colouration
 
 | Action  | Keybind   |
-|---|---|---|
+|---|---|
 |  Heatmap | X  | 
 |  Conditionals | C  | 
 
@@ -142,18 +141,18 @@ As well as the standard control flow colours, which depict the type of control f
 
 The heatmap can show areas of high activity in a large plot
 
-![Heatmap](../img/heatmap.png)
+![Heatmap](img/heatmap.png)
 
 
 #### Conditionals
 
 The conditionals render offers a quick way to see if a conditional jump as always been taken, never been taken or fully explored.
 
-![Conditional](../img/conditionals.png)
+![Conditional](img/conditionals.png)
 
 
 #### Degree
 
 The degree plot shows how connected nodes are using heatmap colouration. Nodes above the clump limit have their own colour, which shows the nodes affected by the clumping multiplier in the force directed layout settings.
 
-![Degree](../img/degree.png)
+![Degree](img/degree.png)

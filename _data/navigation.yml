@@ -1,10 +1,10 @@
 - name: Documentation
-  link: /userdocs/usage-overview/
+  link: /userdocs/usage-overview
 - name: Development
-  link: /devdocs/overview/
+  link: /devdocs/overview
   dropdown: 
     - name: Documentation
-      link: /devdocs/overview/
+      link: /devdocs/overview
     - name: Trello
       link: https://trello.com/b/OyO4A1O9/rgat
     - name: Builds
