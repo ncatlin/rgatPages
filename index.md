@@ -18,12 +18,13 @@ hero_darken: true
 ![The UI with a heatmap graph](img/heatmap_UI.png)
 *Find busy areas with a heatmap render*
 
-![upx.exe packing a binary](https://user-images.githubusercontent.com/5470374/139731758-5693510a-89d3-4bc2-aebe-000e680a65d9.mp4)
+<video src="https://user-images.githubusercontent.com/5470374/139731758-5693510a-89d3-4bc2-aebe-000e680a65d9.mp4" controls="controls" style="max-width: 500px;">
+  
 *Live cylinder plot of UPX packing a binary*
 
-![Force directed block layout being re-plot using the explode scheme](https://user-images.githubusercontent.com/5470374/139732976-37df2626-7993-4398-92cd-2720c8acfdbe.mp4)
+<video src="https://user-images.githubusercontent.com/5470374/139732976-37df2626-7993-4398-92cd-2720c8acfdbe.mp4" controls="controls" style="max-width: 500px;">
+  
 *'Detonate' malware into a force-directed graph layout*
-
 
 ### Features
 
