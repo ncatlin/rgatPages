@@ -50,7 +50,7 @@ The following useful default keybinds are configurable
 |  Yaw + | End  | Alt+ Drag Left |
 |  Yaw - | Delete  | Alt+ Drag Right|
 
-![yaw](https://user-images.githubusercontent.com/5470374/138618757-94512557-d833-4d51-9609-7a7eda38ba82.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138618757-94512557-d833-4d51-9609-7a7eda38ba82.mp4' controls='controls' style='max-width: 800px;'></video>
 
 #### Pitch
 
@@ -59,7 +59,7 @@ The following useful default keybinds are configurable
 |  Pitch Forward | Page Up  | Alt+ Drag Up |
 |  Pitch Back | Page Down | Alt+ Drag Down|
 
-![Pitch](https://user-images.githubusercontent.com/5470374/138619203-28f0a8d8-4116-40e1-95f8-dc7316fc8a36.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138619203-28f0a8d8-4116-40e1-95f8-dc7316fc8a36.mp4' controls='controls' style='max-width: 800px;'></video>
 
 #### Roll
 
@@ -68,7 +68,7 @@ The following useful default keybinds are configurable
 |  Roll Clockwise | Home  | |
 |  Roll AntiClockwise | Insert  | |
 
-![Roll](https://user-images.githubusercontent.com/5470374/138619321-140e8342-042d-4eee-a4dd-0d5de0e79bae.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138619321-140e8342-042d-4eee-a4dd-0d5de0e79bae.mp4' controls='controls' style='max-width: 800px;'></video>
 
 #### Movement
 
@@ -90,11 +90,10 @@ Static layouts place instruction nodes according to rules, so they run very quic
 
 The Cylinder respects call/return relationships so it gives a traditional control flow graph layout
 
-![Cylinder Video](https://user-images.githubusercontent.com/5470374/138753109-07f8bd52-dc6e-4143-b3ed-eaeb13076922.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138753109-07f8bd52-dc6e-4143-b3ed-eaeb13076922.mp4' controls='controls' style='max-width: 800px;'></video>
 
 The circle layout may also be useful for getting an idea of how the graphs connections
-
-![Circle Video](https://user-images.githubusercontent.com/5470374/138760236-d34a4bda-992d-4ca3-bf43-3b51023b9bc9.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138760236-d34a4bda-992d-4ca3-bf43-3b51023b9bc9.mp4' controls='controls' style='max-width: 800px;'></video>
 
 
 ### Force Directed Layouts

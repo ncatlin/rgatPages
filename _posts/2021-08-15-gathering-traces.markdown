@@ -36,7 +36,7 @@ The main overhead is the I/O of writing this trace data back to rgat, so we need
 
 Let's look at a how the nestedloops32 test is instrumented.
 
-![Cylinder render of the nestedloops32 test](/blogimg/0/nestedheat.png)
+![Cylinder render of the nestedloops32 test](../../../../../blogimg/0/nestedheat.png)
 
 *Cylinder plot + heatmap render of the nestedloops32 test trace*
 
@@ -45,7 +45,7 @@ The code has 4 levels of nested loops that combine to execute hundreds of millio
 Lets start by improving on how the simplest instruction trace recorder might gather this trace, focusing on the innermost loop:
 
 
-![nestedloops32 test recorded instruction by instruction](/blogimg/0/eachInstructionTrace.gif)
+![nestedloops32 test recorded instruction by instruction](../../../../../blogimg/0/eachInstructionTrace.gif)
 
 *Instruction-by-instruction recording of the inner loop*
 
@@ -54,7 +54,7 @@ Lets start by improving on how the simplest instruction trace recorder might gat
 rgat receives the raw program code and the IDs of basic blocks in the analysis stage, before blocks are executed, so all we need to rebuild the trace is a unique ID for the block. The block ID is gathered in the instrumentation stage (ie: when it executes) at the end of the block - we also know what is going to be executed next.
 Now instead of recording the 5 instructions in the block 997 times, we just output 997 'trace tags' consisting of the block ID and the address of the next bit of code that will be executed. 
 
-![nestedloops32 test recorded block by block](/blogimg/0/eachBlockTrace.gif)
+![nestedloops32 test recorded block by block](../../../../../blogimg/0/eachBlockTrace.gif)
 
 *Block-by-block recording of the inner loop*
 
@@ -62,7 +62,7 @@ Now instead of recording the 5 instructions in the block 997 times, we just outp
 
 Now we are outputting a single identical item, this is very easy to compress. Each block in instrumented code is assigned a counter. If the counter is incremented a certain number of times then we stop outputting trace tags until something else is executed. This partial de-instrumentation is referred to as 'unchaining' in the rgat codebase. 
 
-![nestedloops32 test recorded with block counting](/blogimg/0/countBlockTrace.gif)
+![nestedloops32 test recorded with block counting](../../../../../blogimg/0/countBlockTrace.gif)
 
 *The inner loop executes 2 times normally, then a further 995 with block counting. The U,level4 tag on the third loop tells rgat that the region is busy, so it can be animated* 
 
@@ -81,7 +81,7 @@ The cliff notes version of the algorithm is:
   
 This results in a kind of sliding window effect where regions of varying control flow stay quite interactive on rgat's display, but the more time a thread spends in the region, the fewer tags are output - keeping things fairly performant.
 
-![nestedloops32 test recorded with region activity tracking](/blogimg/0/regionActivityTrace.gif)
+![nestedloops32 test recorded with region activity tracking](../../../../../blogimg/0/regionActivityTrace.gif)
 
 ##### Optimisation 4: Be lossy
 
@@ -89,6 +89,6 @@ One important note is that this performance comes at the cost of some precision:
 
 Using a deinstrumentation limit of 10, Prgat records the whole 1.38bn instruction nestedloops32 test using 463 trace tags
 
-![nestedloops32 visualiser bar](/blogimg/0/nestedloopsvisbar.png)
+![nestedloops32 visualiser bar](../../../../../blogimg/0/nestedloopsvisbar.png)
 
 Note that on the (replay) visualiser bar for this trace, the top plot shows the bulk of the programs instructions (by execution count) being recorded in a single burst at the end as the regions for all 4 loops emit their counters.

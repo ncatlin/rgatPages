@@ -49,13 +49,13 @@ That's a very flat control flow, so the graph should look really simple, right?
 
 Here is what happens if we feed the raw trace into the force directed node layout pipeline (ie: Standard Fruchterman-Reingold) 
 
-![Force-directed node render of consoleprint32 with jumpthunks](/blogimg/1/rgat_ConsolePrint32_thunks.png)
+![Force-directed node render of consoleprint32 with jumpthunks](../../../../../blogimg/1/rgat_ConsolePrint32_thunks.png)
 
 The issue here is that ```call GetStdHandle``` doesn't actually call GetStdHandle in kernel32.dll - it calls a jump thunk within the .text section ```jmp dword ptr [0x812008]``` which pulls the actual address of GetStdHandle from the .idata section and jumps to it. Every call to the same API will be linked to the same jump thunk (the faint curved grey edges in the above plot), which ruins the layout.
 
 If the 'Hide API Thunks' option is enabled at trace launch, rgat will detect and write these thunks out of the graph - making the layout much more useful for understanding what the program is doing.
 
-![Force-directed node render of consoleprint32 without jumpthunks](/blogimg/1/rgat_ConsolePrint32_nothunks.png)
+![Force-directed node render of consoleprint32 without jumpthunks](../../../../../blogimg/1/rgat_ConsolePrint32_nothunks.png)
 
 #### Exploit Mitigations - Stack Check
 
@@ -94,7 +94,7 @@ int main()
 
 And here is how it looks with the same force directed layout applied to it:
 
-![Zoomed out Force-directed node render of blockingapi](/blogimg/1/rgat_BlockingAPI_zoomedout.png)
+![Zoomed out Force-directed node render of blockingapi](../../../../../blogimg/1/rgat_BlockingAPI_zoomedout.png)
 
 Oof. 
 
@@ -102,7 +102,7 @@ Bear in mind that most of this isn't the code above, but [CRT Initialization](ht
 
 Let's see what is causing the horrible star shaped tangle.
 
-![Zoomed out Force-directed node render of blockingapi](/blogimg/1/rgat_BlockingAPI_stack_check.png)
+![Zoomed out Force-directed node render of blockingapi](../../../../../blogimg/1/rgat_BlockingAPI_stack_check.png)
 
 The whole layout has been mangled by these three instructions
 
@@ -121,7 +121,7 @@ The whole layout has been mangled by these three instructions
 
 [Gone from new compilers](https://en.wikipedia.org/wiki/Intel_MPX#Software_support), but not from our hearts/many binaries - the effect of this on control flow graphs was similar to that of stack checking in that it joins much of the code up to a small number of ```bnd``` prefixed instructions.
 
-![Intel MPX clumping](/blogimg/1/rgat_BlockingAPI_MPX.png)
+![Intel MPX clumping](../../../../../blogimg/1/rgat_BlockingAPI_MPX.png)
 
 #### Just My Code
 
@@ -147,11 +147,11 @@ This is quite underwhelming and tends to just make a bigger mess. It would proba
 
 This could just be an issue with Fructerman Reingold. [GraphInsight](https://github.com/CarloNicolini/GraphInsight) offers a few alternative force-directed layouts of the same trace 
 
-![GraphInsight rendering of standard FR](/blogimg/1/GI_blockingapi_FR.png)
+![GraphInsight rendering of standard FR](../../../../../blogimg/1/GI_blockingapi_FR.png)
 
-![GraphInsight Binary Stress Rendering](/blogimg/1/GI_blockingapi_binstress.png)
+![GraphInsight Binary Stress Rendering](../../../../../blogimg/1/GI_blockingapi_binstress.png)
 
-![GraphInsight FR Proportional Multilevel](/blogimg/1/GI_blockingapi_FRpropml.png)
+![GraphInsight FR Proportional Multilevel](../../../../../blogimg/1/GI_blockingapi_FRpropml.png)
 
 Some offer a little better insight into the structure of the code, but it might be that Graph Rewriting is the only option.
 
@@ -159,7 +159,7 @@ Some offer a little better insight into the structure of the code, but it might 
 
 It could also be true that I'm just throwing magic pretty physics algorithms at instruction traces and hoping some useful insight appears, when in reality Force Directed layouts could just be entirely inappropriate for control flow graphs.
 
-![rgat Cylinder layout](/blogimg/1/rgat_BlockingAPI_JMC_GS_Cylinder.png)
+![rgat Cylinder layout](../../../../../blogimg/1/rgat_BlockingAPI_JMC_GS_Cylinder.png)
 
 rgat's Cylinder layout of the above trace is not affected in terms of how nodes are positioned, it's just clogged up with all the edges entering/leaving these routines, which is a much easier fix.
 
