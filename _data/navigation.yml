@@ -9,7 +9,8 @@
       link: https://trello.com/b/OyO4A1O9/rgat
     - name: Builds
       link: https://github.com/ncatlin/rgat/actions
- 
+- name: Blog
+  link: /blog/
 #- name: Gallery
 #  link: /Gallery/
   

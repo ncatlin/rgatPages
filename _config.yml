@@ -26,6 +26,8 @@ baseurl: "/rgatPages" # the subpath of your site, e.g. /blog
 url: "https://ncatlin.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nictln
 github_username:  ncatlin
+paginate: 5
+paginate_path: "/blog/page:num"
 
 # Build settings
 #theme: slate
