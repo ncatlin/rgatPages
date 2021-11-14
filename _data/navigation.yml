@@ -16,7 +16,7 @@
   
   
 - name: Download
-  link: /download/
+  link: https://github.com/ncatlin/rgat/releases
   dropdown: 
     - name: Latest Release
       link: https://github.com/ncatlin/rgat/releases

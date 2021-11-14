@@ -48,7 +48,7 @@ It currently supports 32 and 64 bit Windows EXE's and DLL's, but it now runs on 
 
 ## Requirements and Installation
 
-The two main requirements for 0.6.0 are:
+The two main requirements for 0.6.1 are:
 - Windows, with the ability to run .NET 5 programs
 - For the computer running the visualiser: A GPU with Vulkan driver support (ie: [_this_ test program](https://github.com/skeeto/vulkan-test) works)
 
