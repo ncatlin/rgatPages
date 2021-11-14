@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Packers & Protectors I"
+title:  "Instruction Trace Visualisation: Packers & Protectors"
 date:   2021-11-14 17:22:00 +0100
 author: Nia Catlin
 categories: packers protectors
