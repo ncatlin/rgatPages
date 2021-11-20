@@ -113,16 +113,13 @@ It's important to limit the amount of instrumented code to make this practical -
 
 Using the [Quick Menu](ui-visualisertab.md#quick-menu) may be essential to getting a useful layout depending on the structure of the target you are working with.
 
-![Node Repulsion](https://user-images.githubusercontent.com/5470374/138764236-8be52728-7e3a-4805-b50d-5f4aab3214ec.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138764236-8be52728-7e3a-4805-b50d-5f4aab3214ec.mp4' controls='controls' style='max-width: 800px;'></video>
 
 *Adjust node repulsion to control the size of the layout*
-
-![Speed Limits](
-https://user-images.githubusercontent.com/5470374/138764751-d1946f2b-3797-4b74-b597-d3059fd9bfc1.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138764751-d1946f2b-3797-4b74-b597-d3059fd9bfc1.mp4' controls='controls' style='max-width: 800px;'></video>
 
 *High temperatures and speed limits can make graph layout fast, but nodes will shake violently when they approach equilibrium*
-
-![Replotting](https://user-images.githubusercontent.com/5470374/138766266-8bed8d95-c9aa-42a4-931e-4250c0c96e2c.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/138766266-8bed8d95-c9aa-42a4-931e-4250c0c96e2c.mp4' controls='controls' style='max-width: 800px;'></video>
 
 *Experiment with different replotting methods*
 

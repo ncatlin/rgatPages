@@ -137,7 +137,7 @@ This section discusses work in progress to try and fix this problem
 
 One low-effort potential option is to reduce the strength of edges connecting highly connected nodes. 
 
-![Adjusting the edge strengths of high degree nodes](https://user-images.githubusercontent.com/5470374/139589297-83b23c7d-c750-405c-8a9c-6ccdbabb8fef.mp4)
+<video src='https://user-images.githubusercontent.com/5470374/139589297-83b23c7d-c750-405c-8a9c-6ccdbabb8fef.mp4' controls='controls' style='max-width: 800px;'></video>
 
 This is quite underwhelming and tends to just make a bigger mess. It would probably be more effective to have the first in and out edges treated normally and the rest just ignored, but nothing useful is likely to come from this.
 
