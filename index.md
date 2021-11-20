@@ -43,8 +43,7 @@ See the [Changelog](https://github.com/ncatlin/rgat/blob/master/CHANGELOG.md) fo
 
 See the [Trello](https://trello.com/b/OyO4A1O9/rgat) for the features under development or scheduled to be worked on and known bugs
 
-It currently supports 32 and 64 bit Windows EXE's and DLL's, but it now runs on .NET so Linux support should be slightly less distant that it was a while ago. It won't work very well with .NET apps.
-
+It currently supports 32 and 64 bit Windows EXE's and DLL's, but it now runs on .NET so Linux support should be slightly less distant that it was a while ago. Technically it will trace [.NET apps and other JIT binaries](https://ncatlin.github.io/rgatPages/tracing/2021/11/19/visualising-hello-world.html#c-net-5-self-contained-executable) but it's rarely a good idea.
 
 ## Requirements and Installation
 
