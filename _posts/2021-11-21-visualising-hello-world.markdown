@@ -62,7 +62,7 @@ Number of basic blocks: 151,304
 ![Cylinder directed plot of hello world in C](/rgatPages/blogimg/3/gccc/rgat_hello_6724_1119_181142.png)
 *The compiler pads the assembly out with initialisation of the stack cookie and the C runtime library. 536 Nodes, 1.1k instructions executed*
 
-<video src='https://user-images.githubusercontent.com/5470374/142697051-33cbbdfc-abe0-4131-aa51-7085e347f2a4.mp4' controls='controls' style='max-width: 800px;'></video>
+<video src='https://user-images.githubusercontent.com/5470374/142743003-d32c1126-ce11-4f82-9a0d-f18c9a2de87a.mp4' controls='controls' style='max-width: 1200px;'></video>
 
 ## C++ (MSVC 14.29.30133, Visual Studio Community 2019)
 
@@ -77,7 +77,7 @@ Number of basic blocks: 568,565
 
 The VC++ output has a higher number of instructions executed because of the increased API usage - the actual setup code that executes is lighter than GCCs C output.
 
-<video src='https://user-images.githubusercontent.com/5470374/142696854-a10df256-96bf-47ee-a13a-406ba198bf98.mp4' controls='controls' style='max-width: 800px;'></video>
+<video src='https://user-images.githubusercontent.com/5470374/142743183-6304d4cc-780f-4ebc-85af-eee026dac76c.mp4' controls='controls' style='max-width: 1200px;'></video>
 
 
 ## Ada (GNAT Studio Community 2021 [20210423])
@@ -109,7 +109,7 @@ The vast majority of the above instructions are in Windows library calls - the R
 ![Rust](/rgatPages/blogimg/3/rust/rgat_hello_21584_1119_201108.png)
 *1946 Nodes, 2.37K instructions*
 
-<video src='https://user-images.githubusercontent.com/5470374/142697191-8139f742-f1cc-4024-ab2a-d9c3fe91fd8a.mp4' controls='controls' style='max-width: 800px;'></video>
+<video src='https://user-images.githubusercontent.com/5470374/142743496-cb3d970d-4767-49b9-921e-0083f3a9b037.mp4' controls='controls' style='max-width: 1200px;'></video>
 
 
 ## Delphi (Embarcadero Delphi 10.4 Community Edition)
@@ -123,7 +123,7 @@ Number of basic blocks: 1,191,836
 ![Cylinder directed plot of hello world in Delphi](/rgatPages/blogimg/3/delphi/cylinders.png)
 *Delphi's setup stub does some actual work. 2013 nodes, 56.5K instructions executed*
 
-<video src='https://user-images.githubusercontent.com/5470374/142697265-1c717c70-b693-46fd-a2e2-b521faa3b8a0.mp4' controls='controls' style='max-width: 800px;'></video>
+<video src='https://user-images.githubusercontent.com/5470374/142744017-1deb690e-8347-4214-bf9b-558c944a8bdc.mp4' controls='controls' style='max-width: 1200px;'></video>
 
 ## Golang (go1.17.3 windows/amd64) [Failed]
 
