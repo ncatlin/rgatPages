@@ -92,7 +92,8 @@ The Cylinder respects call/return relationships so it gives a traditional contro
 
 <video src='https://user-images.githubusercontent.com/5470374/138753109-07f8bd52-dc6e-4143-b3ed-eaeb13076922.mp4' controls='controls' style='max-width: 800px;'></video>
 
-The circle layout may also be useful for getting an idea of how the graphs connections
+
+The circle layout may also be a useful way to find out where the most connected instructions are
 <video src='https://user-images.githubusercontent.com/5470374/138760236-d34a4bda-992d-4ca3-bf43-3b51023b9bc9.mp4' controls='controls' style='max-width: 800px;'></video>
 
 
