@@ -1,38 +1,41 @@
 ---
 layout: post
-title:  "Visualising the 300M instructions of... Hello World?"
+title:  "Visualising the 300M instructions of Hello World"
 date:   2021-11-19 22:00:00 +0100
 author: Nia Catlin
 categories: tracing
 image: /rgatPages/blogimg/3/rust/gif.gif
 ---
 
-Disclaimer: The following graphs are visualisations of instruction traces generated from Windows compiled or interpreted programs written in each language. These were created to test rgat and are not intended to be used as a time/space critique of these languages. Don't try to draw any useful conclusions from these graphs unless you are a purveyor of tiny, high-performance hello world programs.
+## Intro
 
-This post is mainly graphs and a bit of commentary - if you want technical details you may like the post about [recording traces](https://ncatlin.github.io/rgatPages/instrumentation/pin/2021/11/03/gathering-traces.html).
+This post covers some testing of instruction trace gathering and visualisation capability on the hello binaries of 13 different languages. It's mainly graphs and a bit of commentary - if you want technical details you may like the post about [recording traces](https://ncatlin.github.io/rgatPages/instrumentation/pin/2021/11/03/gathering-traces.html).
+
+Disclaimer: The following graphs are visualisations of instruction traces generated from Windows compiled or interpreted programs written in each language. These were created to test rgat and are not intended to be used as a time/space critique of these languages. Don't try to draw any useful conclusions from these graphs unless you are a purveyor of tiny, high-performance hello world programs.
 
 Methodology: Programs were compiled from [The Hello World Collection](http://helloworldcollection.de/) on Windows 10 using recent versions of the available x64 tooling. Release builds were generated where relevant.
 
 [Sources/Binaries can be found here](https://github.com/ncatlin/HelloWorldTracingBlog)
 
-Plots are ordered by the number of instructions executed. The raw instruction count is gathered with the sample Pintool provided with the Intel Pin kit - these counts include code in Windows libraries.
-Code in the Windows directory is not instrumented by the traces shown, so there will generally be far fewer instructions on the graph layouts.
+Plots are ordered by the total number of instructions executed as recorded by Pin. The raw instruction count is gathered with the sample Pintool provided with the Intel Pin kit - these counts include code in Windows libraries.
+Code in the Windows directory is not instrumented by the traces shown, so there will generally be far fewer instructions on the graph layouts. Any reference to 'Nodes' refers to instructions with a unique address, whereas 'instructions executed' refers to the total number of times all instructions were executed.
 
 Chosen languages are a mix of the [GitHub top languages](https://octoverse.github.com/#top-languages-over-the-years), languages that are interesting from a malware perspective and any other language where I just wondered what the control flow graph would look like.
 
+- [Intro](#intro)
 - [x64 Assembly (MASM)](#x64-assembly-masm)
 - [C (GCC 4.8.3)](#c-gcc-483)
-- [C++ (Visual Studio Community 2019)](#c-visual-studio-community-2019)
+- [C++ (MSVC 14.29.30133, Visual Studio Community 2019)](#c-msvc-142930133-visual-studio-community-2019)
 - [Ada (GNAT Studio Community 2021 [20210423])](#ada-gnat-studio-community-2021-20210423)
 - [Rust (1.56.1)](#rust-1561)
 - [Delphi (Embarcadero Delphi 10.4 Community Edition)](#delphi-embarcadero-delphi-104-community-edition)
 - [Golang (go1.17.3 windows/amd64) [Failed]](#golang-go1173-windowsamd64-failed)
 - [AutoIt (v3, Bundled to an EXE with Aut2exe)](#autoit-v3-bundled-to-an-exe-with-aut2exe)
+- [Java (OpenJDK Runtime Environment (build 17.0.1+12-39), JRE executed directly)](#java-openjdk-runtime-environment-build-170112-39-jre-executed-directly)
 - [C\# (.NET 5, Self-contained executable)](#c-net-5-self-contained-executable)
 - [Javascript (Node.js windows-x64-17.1.0 bundled with nexe)](#javascript-nodejs-windows-x64-1710-bundled-with-nexe)
-- [Python 3.10 (CPython, PyInstaller Wrapped)](#python-310-cpython-pyinstaller-wrapped)
+- [Python (CPython 3.10, PyInstaller Wrapped)](#python-cpython-310-pyinstaller-wrapped)
 - [Ruby (ruby 3.0.2p107, Interpreter executed directly)](#ruby-ruby-302p107-interpreter-executed-directly)
-- [Java (OpenJDK Runtime Environment (build 17.0.1+12-39), JRE executed directly)](#java-openjdk-runtime-environment-build-170112-39-jre-executed-directly)
 - [Conclusions](#conclusions)
 
 ## x64 Assembly (MASM)
@@ -42,8 +45,10 @@ Raw instruction count (including windows libraries)
 Number of instructions: 220,029
 Number of basic blocks: 49,627
 ```
+This is our base for comparison.
+
 ![Force directed plot of hello world in assembly](/rgatPages/blogimg/3/masm/rgat_HelloWorldMasm_21824_1119_181103.png)
-*Nothing to get excited about here - 11 instructions and a couple of API calls*
+*Nothing to get excited about here - 11 instructions and a couple of API calls.*
 
 
 ## C (GCC 4.8.3)
@@ -59,7 +64,7 @@ Number of basic blocks: 151,304
 
 <video src='https://user-images.githubusercontent.com/5470374/142697051-33cbbdfc-abe0-4131-aa51-7085e347f2a4.mp4' controls='controls' style='max-width: 800px;'></video>
 
-## C++ (Visual Studio Community 2019)
+## C++ (MSVC 14.29.30133, Visual Studio Community 2019)
 
 ```
 Raw instruction count (including windows libraries)
@@ -170,6 +175,20 @@ Mainly of interest from a malware perspective, I expected problems on seeing thi
 
 ![The main thread force directed graph](/rgatPages/blogimg/3/autoit/rgat_hello_21328_1119_201158.png)
 
+
+## Java (OpenJDK Runtime Environment (build 17.0.1+12-39), JRE executed directly)
+
+```
+Raw instruction count (including windows libraries)
+Number of instructions: 101,474,902
+Number of basic blocks: 20,404,201
+```
+
+Java was the only trace where many complex threads were generated, so have a wall of graphs:
+
+![Java Threads](/rgatPages/blogimg/3/java/threads.png)
+
+
 ## C\# (.NET 5, Self-contained executable)
 
 ```
@@ -206,7 +225,7 @@ Number of basic blocks: 41,162,137
 
 Not pictured are a few smaller (but much simpler) threads that would bring the instruction count up by another few million.
 
-## Python 3.10 (CPython, PyInstaller Wrapped)
+## Python (CPython 3.10, PyInstaller Wrapped)
 
 ```
 Raw instruction count (including windows libraries)
@@ -242,19 +261,6 @@ Ruby was the easiest JIT'ted language to work with - the vast majority of its in
 
 ![Dispatcher pompoms](/rgatPages/blogimg/3/ruby/rgat_ruby_18528_1119_141139.png)
 *JIT code also tends to have a lot of these pom-pom structures in force directed layouts where lots of tiny code fragments are called by a central dispatcher (the internal orange edges are returns) - which you will also see with certain types of control flow obfuscation like flattening.*
-
-
-## Java (OpenJDK Runtime Environment (build 17.0.1+12-39), JRE executed directly)
-
-```
-Raw instruction count (including windows libraries)
-Number of instructions: 101,474,902
-Number of basic blocks: 20,404,201
-```
-
-Java was the only trace where many complex threads were generated - so have a wall of graphs
-
-![C# Cylinders](/rgatPages/blogimg/3/java/threads.png)
 
 
 ## Conclusions
