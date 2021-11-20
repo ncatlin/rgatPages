@@ -13,6 +13,8 @@ As malware analysis is often performed in environments with limited GPU access, 
 
 ### Usage
 
+* Note: Remote tracing is still quite unstable and is [next](https://trello.com/c/4ul7K6Fb/277-fix-remote-tracing-mode) on the list of things to work on *
+
 rgat should be started in GUI mode as usual on the visualiser device, and in headless 'bridged' mode on the tracing device. To support different network configurations, remote tracing connection can be established in either direction.
 
 rgat should be installed on the 'headless' tracing device (running in command line mode) and the GPU enabled analysis device (running in GUI mode). Signatures can be transferred by the GUI to the tracer, but actual samples need to be managed by the user. 
