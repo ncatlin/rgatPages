@@ -58,7 +58,7 @@ The two main requirements for 0.6.1 are:
 - Run rgat.exe - it will unpack the tools it needs into the directory it is launched in
 - Configure it to your liking in the settings
   
-If nothing else you may want to get familiar with the [graph manipulation controls](rgatPages/userdocs/graph-manipulation.md)
+If nothing else you may want to get familiar with the [graph manipulation controls](userdocs/graph-manipulation.md)
 
 ##### To trace something
 - Drag and drop a binary onto the UI
@@ -66,8 +66,8 @@ If nothing else you may want to get familiar with the [graph manipulation contro
   
 ## Documentation
 
-- [Usage Guide](rgatPages/userdocs/overview.md)
-- [How It Works/Development](rgatPages/devdocs/overview.md)
+- [Usage Guide](userdocs/overview.md)
+- [How It Works/Development](devdocs/overview.md)
 
 ## Known Issues
 
