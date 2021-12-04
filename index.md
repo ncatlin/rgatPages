@@ -66,7 +66,7 @@ If nothing else you may want to get familiar with the [graph manipulation contro
   
 ## Documentation
 
-- [Usage Guide](userdocs/overview.md)
+- [Usage Guide](userdocs/usage-overview.md)
 - [How It Works/Development](devdocs/overview.md)
 
 ## Known Issues
